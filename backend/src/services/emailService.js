@@ -26,5 +26,5 @@ export const sendCertificateEmail = async (to, pdfPath, jpgPath, name) => {
   };
 
   await transporter.sendMail(mailOptions);
-  console.log(`✅ Email sent to ${to}`);
+  console.log(`Email sent to ${to}`);
 };

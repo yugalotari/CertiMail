@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Certificate of Business Registration</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap');
@@ -13,27 +12,27 @@
       box-sizing: border-box;
     }
 
-    html,
     body {
-      height: 100%;
-      width: 100%;
       font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top left, #f9f5e3, #f1e4c3, #e3c77e);
       display: flex;
       justify-content: center;
       align-items: center;
-      /* background: #f0f0f0; */
+      height: 100vh;
+      padding: 40px;
     }
 
     .certificate-container {
-      width: 850px;
+      width: 900px;
       max-width: 95%;
-      /* background: #fffdf5; */
-      border: 12px solid #d4af37;
-      border-radius: 16px;
-      padding: 50px 60px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 12px double #d4af37;
+      border-radius: 18px;
+      padding: 60px 70px;
       text-align: center;
       position: relative;
-      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 45px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(6px);
     }
 
     .certificate-container::before {
@@ -44,30 +43,22 @@
       right: 15px;
       bottom: 15px;
       border: 2px solid #d4af37;
-      border-radius: 12px;
-    }
-
-    .certificate-logo {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      width: 80px;
-      height: 80px;
-      object-fit: contain;
+      border-radius: 14px;
+      pointer-events: none;
     }
 
     h1 {
       font-family: 'Playfair Display', serif;
-      color: #2c3e50;
-      font-size: 40px;
+      color: #1e2b3a;
+      font-size: 42px;
       margin-bottom: 10px;
     }
 
     h2 {
       font-family: 'Playfair Display', serif;
-      color: #c59d31;
+      color: #b08d2d;
       font-size: 32px;
-      margin: 15px 0 25px 0;
+      margin: 20px 0;
     }
 
     p {
@@ -77,15 +68,44 @@
       margin: 8px 0;
     }
 
-    .highlight {
-      font-weight: 600;
-      color: #000;
+    .statement {
+      margin: 20px 0;
+      font-style: italic;
+      color: #444;
+      font-size: 17px;
+    }
+
+    .certificate-details {
+      text-align: left;
+      margin: 30px auto;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      padding: 25px 35px;
+      width: 80%;
+      box-shadow: inset 0 0 8px rgba(212, 175, 55, 0.3);
+    }
+
+    .certificate-details p {
+      font-size: 17px;
+      margin: 10px 0;
+      color: #222;
+    }
+
+    .certificate-details strong {
+      color: #b08d2d;
+    }
+
+    .certificate-details hr {
+      border: none;
+      border-top: 1px dashed #d4af37;
+      margin: 15px 0;
     }
 
     .issued-date {
       margin-top: 35px;
       font-size: 16px;
-      color: #555;
+      color: #444;
     }
 
     .footer {
@@ -114,8 +134,8 @@
     .seal {
       border: 3px dashed #d4af37;
       border-radius: 50%;
-      width: 100px;
-      height: 100px;
+      width: 110px;
+      height: 110px;
       font-weight: 600;
       font-size: 14px;
       color: #d4af37;
@@ -123,28 +143,26 @@
       align-items: center;
       justify-content: center;
       text-align: center;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
     }
 
     @media screen and (max-width: 900px) {
       .certificate-container {
         padding: 40px 30px;
       }
-
       h1 {
-        font-size: 32px;
+        font-size: 34px;
       }
-
       h2 {
         font-size: 26px;
       }
-
       .signature {
         width: 200px;
       }
-
       .seal {
-        width: 80px;
-        height: 80px;
+        width: 85px;
+        height: 85px;
         font-size: 12px;
       }
     }
@@ -154,29 +172,41 @@
         flex-direction: column;
         gap: 30px;
       }
+      .certificate-details {
+        width: 95%;
+      }
     }
   </style>
 </head>
-
 <body>
   <div class="certificate-container">
-    <img class="certificate-logo" src="data:image/jpeg;base64,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" alt="Logo">
     <h1>Certificate of Business Registration</h1>
     <p>This is to certify that</p>
-    <h2><span class="highlight"><%= name %></span></h2>
-    <p>Email: <span class="highlight"><%= email %></span></p>
-    <p>is the owner of the business</p>
-    <h2><span class="highlight"><%= businessName %></span></h2>
-    <p>located at <span class="highlight"><%= businessAddress %></span></p>
-    <p>and is officially registered under GST Number</p>
-    <p class="highlight"><%= gstNumber %></p>
+    <h2><%= name %></h2>
+
+    <p class="statement">
+      has successfully registered the business with the following details under the legal standards of business operation.
+    </p>
+
+    <div class="certificate-details">
+      <p><strong>Registered To:</strong> <%= name %></p>
+      <p><strong>Official Contact:</strong> <%= email %></p>
+      <p><strong>Business Entity Name:</strong> <%= businessName %></p>
+      <p><strong>Principal Place of Business:</strong> <%= businessAddress %></p>
+      <p><strong>GST Registration No.:</strong> <%= gstNumber %></p>
+      <hr />
+      <p style="font-style: italic; color: #444;">
+        This registration certifies that the above-named entity has been duly recognized as a legitimate business organization 
+        and is authorized to conduct its operations in accordance with applicable legal standards.
+      </p>
+    </div>
+
     <p class="issued-date">Issued on: <%= new Date().toLocaleDateString() %></p>
 
     <div class="footer">
       <div class="signature">Authorized Signature</div>
-      <div class="seal">Official Seal</div>
+      <div class="seal">HamBOLDS Verified</div>
     </div>
   </div>
 </body>
-
 </html>

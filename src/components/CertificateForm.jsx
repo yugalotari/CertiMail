@@ -5,6 +5,8 @@ import AnimatedSuccessModal from "./AnimatedSuccessModal";
 import "../styles/animations.css";
 import "../styles/loader.css";
 import "../styles/form.css";
+import logo from "../assets/hamboldsLogo.jpg"
+
 
 const CertificateForm = () => {
   const [formData, setFormData] = useState({
@@ -42,7 +44,11 @@ const CertificateForm = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-
+      <div style={{ display: 'flex', justifyContent: 'center' ,marginBottom:'20px'}}>
+        <div style={{ width: "210px"}}>
+          <img src={logo} alt="Company Logo" className="form-logo" />
+        </div>
+      </div>
 
       <motion.h2
         className="form-title"

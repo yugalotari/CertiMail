@@ -1,11 +1,9 @@
-/* Reset some defaults */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Center the form in viewport */
 body, html {
   height: 100%;
   font-family: "Poppins", sans-serif;
@@ -15,24 +13,22 @@ body, html {
   background: #f0f2f5;
 }
 
-/* Form container */
 .form-wrapper {
   position: relative;
   width: 100%;
   max-width: 500px;
-  padding: 80px 40px 40px 40px; /* top padding increased for logo */
+  padding: 20px;
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
 }
 
-/* Logo styling */
 .logo-container {
   position: absolute;
   top: 20px;
   left: 20px;
-  width: 60px;
+  width: 250px;
   height: 60px;
 }
 
@@ -42,7 +38,6 @@ body, html {
   object-fit: contain;
 }
 
-/* Title */
 .form-title {
   text-align: center;
   font-size: 1.4rem;
@@ -51,11 +46,10 @@ body, html {
   margin-bottom: 30px;
 }
 
-/* Form fields */
 .certificate-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 5px;
 }
 
 .input-group {
@@ -64,8 +58,8 @@ body, html {
 }
 
 .input-group label {
-  font-size: 0.95rem;
-  color: #333;
+  font-size: 0.85rem;
+  color: #656565;
   margin-bottom: 5px;
   font-weight: 500;
 }
@@ -84,7 +78,6 @@ body, html {
   outline: none;
 }
 
-/* Submit button */
 .submit-btn {
   margin-top: 10px;
   background: linear-gradient(135deg, #009688, #00796b);
@@ -107,7 +100,6 @@ body, html {
   cursor: not-allowed;
 }
 
-/* Loader overlay */
 .loader-overlay {
   position: fixed;
   top: 0;
@@ -137,7 +129,6 @@ body, html {
   100% { transform: rotate(360deg); }
 }
 
-/* Responsive adjustments */
 @media screen and (max-width: 600px) {
   .form-wrapper {
     padding: 100px 20px 20px 20px;

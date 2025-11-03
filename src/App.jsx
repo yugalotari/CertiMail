@@ -1,6 +1,5 @@
 import React, { Suspense, lazy } from "react";
 import "../src/styles/loader.css";
-import logo from "./assets/hamboldsLogo.jpg"
 import "../src/styles/form.css";
 
 const CertificateForm = lazy(() => import("./components/CertificateForm"));
@@ -16,9 +15,7 @@ function App() {
           </div>
         }
       >
-        <div className="logo-container">
-          <img src={logo} alt="Company Logo" className="form-logo" />
-        </div>
+        
         <CertificateForm />
       </Suspense>
     </div>
