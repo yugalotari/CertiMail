@@ -1,0 +1,28 @@
+import React, { Suspense, lazy } from "react";
+import "../src/styles/loader.css";
+import logo from "./assets/hamboldsLogo.jpg"
+import "../src/styles/form.css";
+
+const CertificateForm = lazy(() => import("./components/CertificateForm"));
+
+function App() {
+  return (
+    <div>
+      <Suspense
+        fallback={
+          <div className="loader-overlay">
+            <div className="loader"></div>
+            <p>Loading Certificate Form...</p>
+          </div>
+        }
+      >
+        <div className="logo-container">
+          <img src={logo} alt="Company Logo" className="form-logo" />
+        </div>
+        <CertificateForm />
+      </Suspense>
+    </div>
+  );
+}
+
+export default App;
